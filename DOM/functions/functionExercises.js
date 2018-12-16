@@ -53,3 +53,49 @@ var arr = [
     [1, 3, 4], 
     [2, 4, 6, 8], 
     [3, 6] ];
+
+//const sortedArray = arr.sort((a,b)=>(a.length - b.length));
+//console.log(sortedArray)
+
+//Sort this array by sum of internal
+
+function sum(arr){
+    return arr.reduce((a,b) => a+b)
+}
+const sortSum = arr.sort((a,b)=>{
+    sum(a) - sum(b)
+})
+//console.log (sortSum);
+
+// 3 TIMES
+
+function fun(){
+    console.log('Hello, world!');
+}
+function call3times(fun){
+    fun();
+    fun();
+    fun();
+}
+//call3times(fun)
+
+
+function callNtimes(num, fun){
+    for (var i =0; i<num; i++){
+        fun();
+    }
+}
+//callNtimes(6, fun)
+
+//Sum an array
+
+function sumArray(arr){
+    return arr.reduce((a,b)=>(a+b),0);
+}
+//console.log(sumArray([2,4,5]))
+
+function acronym(arr){
+    return arr.reduce((a,b)=>a+b.slice(0,1),'').toUpperCase()
+}
+
+console.log(acronym(['very','important','person']));

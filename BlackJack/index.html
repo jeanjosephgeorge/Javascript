@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="/BlackJack/styles.css">
+</head>
+<body>
+
+    <!-- <div style="position:absolute; width:100%; height: 200px; background-color:red; top: 190px; text-align: center; font-size: 150px; opacity: .85;">Ya win!</div> -->
+
+    <div id="table">
+
+        <div id="messages"></div>
+
+        <label>Dealer: </label>
+
+        <label id="dealer-points" class="points"></label>
+
+        <div id="dealer-hand" class="hand">
+
+        </div>
+
+        <label>Player: </label>
+
+        <label id="player-points" class="points"></label>
+
+        <div id="player-hand" class="hand">
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="deal-button">Deal</button>
+
+            <button id="hit-button">Hit</button>
+
+            <button id="stand-button">Stand</button>
+
+            <button id="reset-button">Reset</button>
+
+        </div>
+
+    </div>
+<script src="/BlackJack/blackjack.js"></script>
+</body>
+</html>

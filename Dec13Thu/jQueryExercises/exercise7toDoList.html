@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style>
+    #wrapper {
+        max-width: 480px;
+        margin: auto;
+    }
+    #description, #search, #todo-list {
+      font-size: 1.5em;
+    }
+    button{
+        font-size: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <input id="description" type="text" name="description">
+      <button id="add-button">Add Task</button>
+      <ul id="todo-list">
+        <li>Feed the cat</li> <!--<button>X</button><button>&#x2713</button> -->
+      </ul>
+    </div>
+
+    <script>
+        /*
+        Make a Todo List
+        0. Make it so that after entering the task description, in the text field and clicking the "Add Task" button, a new task appears inside the element with the id todo-list.
+        1. the ability to remove tasks (add an x button)
+        2. the ability to check off tasks - strikes them out wo removing (add a checkbox)
+        3. the ability to delete a task
+        4. the ability to edit an existing task
+        */
+        $(function(){
+        var $add = $('#add-button')
+        var $input = $('#description')
+        var $toDoList = $('#todo-list')
+        
+        //Del Button
+        var $delete = $('<button>',{'text':'X'});
+        var $check = $('<button>',{'text':'Done'})
+        var $edit = $('<button>',{'text':'Edit'})
+        
+        //Add Button
+        $add.click(()=>{
+            var $text = $input.val();
+            var $listItem = $('<li>')
+                //BUTTONS
+            var $delete = $('<button>',{'text':'X'});
+            var $check = $('<button>',{'text':'Done'})
+            var $edit = $('<button>',{'text':'Edit'})
+            //var $final = $toDoList.append($listItem.append($text).append($('<button>',{'text':'X'})).append($('<button>',{'text':'Done'})).append($('<button>',{'text':'Edit'})));
+            var $final = $toDoList.append($listItem.append($text).append($delete).append($check).append($edit));
+            $input.val('')
+            })
+        
+        $('li').append($delete).append($check).append($edit);
+
+        $delete.click(()=>{
+            $(this).remove();
+        })
+
+
+
+        }) //End
+        </script>
+</body>
+</html>

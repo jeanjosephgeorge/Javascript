@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Class</title>
+</head>
+<body>
+    hello world
+
+    <div id='temp' style='font-size: 20px; font-weight: bold'></div>
+    
+    
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script>
+    
+
+
+    $(function(){
+        // Here we set the url and the api key
+        var url = '';
+        var apiKey = '';
+        //Here we build the link in the .get
+        $.get(url+'&appid='+apiKey)
+        .done(result);
+
+        var celsius = result.main.temp - 273.15; // The .main.temp is the location to access the Kelvin value in our API
+        // Do the necessary conversions
+
+        $('#temp').html
+
+
+
+        $.get('https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1')
+        .done((result)=>{
+            console.log(result.list[0].weather[0].main);
+        })
+
+
+    })
+    // setTimeout(()=>{
+    //     console.log('inside set time out')
+    // })
+    // console.log('hello world')
+    
+    //Self-invoking
+    (function(){
+
+    var x = new XMLHttpRequest();
+
+    var method = 'GET';
+
+    var url = 'https://www.apple.com'
+
+    x.open(method,url,true)
+    x.onreadystatechange = function(){
+        if(x.readyState === 4 && x.status === 200){
+            console.log(x.responseText);
+            console.log('hello world');
+        }
+    }
+
+    x.send();
+
+    })(); // END
+    
+    </script>
+    
+</body>
+</html>

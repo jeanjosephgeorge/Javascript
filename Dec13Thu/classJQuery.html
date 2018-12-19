@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="#" id='myAnchor'>This is an anchor tag</a>
+
+    <textarea name="tarea" id="tarea" cols="30" rows="10">
+        this is my text area
+    </textarea>
+
+    <button id='myButton'>BUTTON!</button>
+
+<script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+
+
+<script>
+      //Old way of doing things
+  $(document).ready(function(){
+      //Code block
+  })
+    //New shorter way of doing things
+  $(function(){
+
+
+   // >     $('a')     >  This is how you call anchor tags
+    $('myAnchor')
+    let $anchor = $('#myAnchor')   //  This is how you call somthing with an ID, use a #
+    console.log($anchor)
+  })
+
+
+  $(function(){
+
+    let $myDiv = $('<div>',{ // Using tags <> because we want to create this
+        'class': 'divClass',
+        'text':'hello world',
+        'style':'background-color:red; height: 200px; width: 100%'
+    })
+
+    let $b =  $('body');
+
+    $b.append($myDiv);
+
+    // $b.addClass('pretend')
+
+    // $b.removeClass('pretend')
+
+    $myDiv.click(() =>{
+        //code block
+        alert('helloWorld');
+    })
+
+    //$myDiv.on('mouseover',(event))
+
+    // This is event listening and shows events
+    $(tarea).keydown((event)=>{
+        console.log(`keydown: ${event}`);
+    })
+
+    $(tarea).keyup((event)=>{
+        console.log(`keyup: ${event}`);
+    })
+
+    
+
+  }) // end of jQuery
+
+
+  </script>
+</body>
+</html>

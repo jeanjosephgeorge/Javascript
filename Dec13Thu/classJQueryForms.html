@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Forms</title>
+</head>
+<body>
+
+    <form action="classJQuery.html" method='GET' id='myForm' onsubmit=fun()> <!--onsubmit changes the default action to run a function that you want-->
+        <!-- GET sends the information on the url as ? key=value & key=value & key=value // using the below assigned name as the key -->
+        <!-- POST used when sensitive data is being transmitted-->
+        <fieldset><!--This is used to group related information together -->
+            <legend>This is cool!</legend>
+        <input type="text" name='t'required> <!--Using required sets this box to mandatory-->
+        <input type="radio" name='r'>
+        <input type="password" name='p'required minlength="6" maxlength="10"> <!--Sets a min and max length-->
+        <input type="number" name="" id="n" value="5"  min="1" max="10"> <!--Sets a value in the range of 1 to 10, starting at 1-->
+        <input type="checkbox" name='c'>
+        
+        </fieldset>
+        <fieldset>
+            <legend>Choose format</legend>
+        <label for="choose">Do you prefer css or html?</label>
+        <input id="choose" name="i_like" required pattern="css| html"> 
+        </fieldset>     
+        <button>Submit</button>
+        
+    </form>
+
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+
+    <script>
+    
+    //Below runs and 3rd line prevents default from running and does not go to the other linked page
+    var myForm = document.getElementById('myForm')
+    myForm.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        alert('form submitted')
+    })
+
+    //Below function runs from form
+    // function fun(){
+    //     alert('Form submitted')
+    // }
+    </script>
+        
+</body>
+</html>

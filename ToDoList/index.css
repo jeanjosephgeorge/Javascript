@@ -1,0 +1,25 @@
+.background {
+    /* background-color: aquamarine; */
+    width: 250px
+  }
+  
+  .inputParent {
+    display: flex;
+  }
+  
+  #todoList {
+    width: 100%;
+   
+  }
+  
+  .todoListItem {
+    display: flex;
+    justify-content: flex-end
+  }
+  
+  .text{
+      flex: 1 
+  }
+  .complete {
+    text-decoration: line-through;
+  }

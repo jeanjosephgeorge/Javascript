@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning DOM</title>
+<style>
+    .myDiv{
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+
+
+
+    <script>
+
+/// HOW TO APPEND AND ADD SHTUFF
+
+        var h1 = document.createElement('h1');
+        h1.textContent = 'Hello World.';
+
+        document.body.appendChild(h1);
+// THIS APPENDS TO THE DOCUMENT BODY
+
+
+
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+
+        div.setAttribute ('class', 'myDiv')
+// THIS CREATES AN ATTRIBUTE WHICH WE WANT THE DIV TO FOLLOW
+
+        var h2 = document.createElement('h2');
+        h2.textContent = 'My H2 Tag';
+
+        div.appendChild(h2)
+//THIS CREATES AN H2 TAG, APPENDS THAT TO THE DIV AND THAT DIV IS APPENDED TO THE BODY
+        var innerDiv = document.createElement('div');
+        var anchor = document.createElement('a');
+        anchor.innerText = 'YAHOOO!'
+        anchor.setAttribute('href','www.yahoo.com');
+        
+        innerDiv.append(anchor);
+        div.append(innerDiv)
+
+        function grayBox(){
+            var divMain = document.createElement('div');
+            divMain.setAttribute('class','container');
+            
+            
+
+            return grayBox();
+
+        }
+
+    </script>
+</body>
+</html>

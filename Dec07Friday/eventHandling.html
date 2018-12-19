@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handling</title>
+</head>
+<body>
+    <div id='1' style="background-color: yellow; height:300px; width: 100%" >
+        <!-- onclick="alert('Hello World')" onmouseover="alert('Hello World')" -->
+        Hello World
+    </div>
+
+<script>
+// function changeBackground(){
+//     var div = document.getElementById('1')
+//     div.setAttribute('style','background-color: green; height: 300px; width: 100%')
+
+var div = document.getElementById('1');
+
+    // div.onclick = function(){
+    //     div.setAttribute('style','background-color: green; height: 300px; width: 100%');
+    // }
+
+
+//THIS SECTION LISTENS TO MOUSE EVENTS, Open console to see the results
+div.addEventListener('click',function(e){
+    console.log(e)
+},true)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/AJAX/weatherAPIstyles.css">
+</head>
+<body>
+    <div id='header' class="row">
+        <div id='mainName' class="col-3">The Weather Channel</div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+
+    <div id='temp' class="container">
+        <div id='head1' class="row">
+            <div class="col">Weather data for Houston in the temperature range of your choosing is below:</div>
+        </div>
+        <div id='head2' class="row">
+            <div id=kel class="col"></div>
+            <div id=fah class="col"></div>
+            <div id=cel class="col"></div>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script>
+        
+        (function(){
+
+            var url = 'http://api.openweathermap.org/data/2.5/forecast?id='
+            var id = '4696376'
+            var apiKey = 'cc0b992159a64926adb9c75fb5906ffd'
+
+
+            $.get(url+id+'&appid='+apiKey)
+            .done((result)=>{
+                // console.log(result.list[0].main.temp)
+
+            let kelvin = Math.floor(result.list[0].main.temp);
+            console.log(kelvin);
+            let celsius = Math.floor(kelvin-273.15);
+            console.log(celsius);
+            let fahrenheit = Math.floor(celsius*1.8 + 32)
+            console.log(fahrenheit);
+            
+            $('#kel').text(kelvin + ' K')
+            $('#fah').text(fahrenheit + ' F')
+            $('#cel').text(celsius+ ' C')
+        
+        });
+
+            
+        
+        })(); // End of function
+
+
+    </script>
+</body>
+</html>
+

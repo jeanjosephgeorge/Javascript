@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul>
+    <li><img src="images/ylw.gif" alt="yellow" id="yellow"></li>
+    <li><img src="images/org.gif" alt="orange" id="orange"></li>
+    <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
+    <li><img src="images/blu.gif" alt="blue" id="blue"></li>
+    <li><img src="images/pnk.gif" alt="pink" id="pink" onclick="alert('pink image clicked')" ></li>
+    <li><img src="images/grn.gif" alt="green" id="green"></li>
+    <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
+    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
+    <li><img src="images/red.gif" alt="red" id="red"></li>
+  </ul>
+
+  <script>
+  // var button = document.getElementById('green');
+  // button.onclick = function(){
+  //   alert('Green button clicked')
+  // }
+
+
+  var button = document.querySelector('ul');
+
+    button.addEventListener('click', function(event){
+          // event.target.tagName == "IMG"
+      if (event.target.tagName === "IMG")
+      //Above line searches for the IMG tag in the event.target.tagName line/directory
+      console.log(event); //And this logs it to the console. Try it bruh
+    })
+  }
+  </script>
+
+</body>
+</html>

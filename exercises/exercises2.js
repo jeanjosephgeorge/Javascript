@@ -189,5 +189,16 @@ function positiveNumbers(myArray) {
     console.log(newArray);
 }
 
-myArray = [1,-3,5,-3,0]
-positiveNumbers(myArray)
+//Uncomment two lines below to run program
+//myArray = [1,-3,5,-3,0]
+//positiveNumbers(myArray)
+
+
+
+                        // CAESAR CIPHER
+
+function caesarCipher(myString) {
+var
+}
+
+// caesarCipher ('Genius without education is like silver in the mine')

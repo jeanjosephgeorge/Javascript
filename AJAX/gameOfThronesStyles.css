@@ -1,0 +1,44 @@
+body {
+    background-image: url('https://wallpaper.wiki/wp-content/uploads/2017/06/Game-of-Thrones-Wallpaper-HD-Images.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#header {
+    background-color: black;
+    height: 60px;
+    opacity: 0.8;
+    width: 100%;
+    line-height: 60px;
+    color: rgb(138, 138, 138);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#mainDiv {
+    background-color: black;
+    /* height: 2000px; */
+    opacity: .7;
+    margin-top: 60px;
+}
+#charName{
+    color: whitesmoke;
+    text-align: right;
+    font-weight: bold;
+    font-size: 13px;
+}
+#charHouse{
+    color: whitesmoke;
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+}
+#charAliases{
+    color: whitesmoke;
+    font-style: bold;
+    text-align: left;
+    overflow-x: hidden;
+    font-size: 13px;
+    
+}

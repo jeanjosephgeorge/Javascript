@@ -1,0 +1,41 @@
+#header {
+    height: 80px;
+    opacity: .7;
+    background-color: black;
+    line-height: 80px;
+    text-align: center; 
+}
+
+#mainName {
+    line-height: 80px;
+    text-align: center; 
+    font-size: 28px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#head1{
+    line-height: 90px;
+    text-align: center;
+    color: wheat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+#head2{
+    line-height: 120px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: wheat;
+    font-size: 40px;
+}
+#temp {
+    background-color: black;
+    height: 210px;
+    opacity: .45;
+    margin-top: 50px;
+}
+
+body{
+    background-image: url('https://www.ready.gov/sites/default/files/hazard-hero-images/spaceweather_v1.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
